@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Jaan 💕 | Valentine's Day</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Floating hearts background -->
+  <div id="hearts-bg" class="hearts-container" aria-hidden="true"></div>
+
+  <!-- Surprise envelope - first thing they see -->
+  <section id="envelope-section" class="envelope-section">
+    <div class="envelope-wrapper">
+      <div class="envelope" id="envelope">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body">
+          <span class="envelope-text">Click to open 💌</span>
+        </div>
+      </div>
+      <div class="letter" id="letter">
+        <div class="letter-content">
+          <p class="letter-greeting">My Dearest Jaan,</p>
+          <p>You're about to discover something made just for you...</p>
+          <button class="letter-btn" id="open-main">Open the surprise ✨</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content - revealed after envelope -->
+  <main id="main-content" class="main-content hidden">
+    <!-- Hero with big reveal -->
+    <section class="hero">
+      <div class="hero-bg-pattern"></div>
+      <h1 class="hero-title">
+        <span class="word">Happy</span>
+        <span class="word">Valentine's</span>
+        <span class="word highlight">Jaan</span>
+        <span class="word">!</span>
+      </h1>
+      <p class="hero-subtitle">You mean the world to me 🌍💖</p>
+      <button class="cta-btn" id="confetti-btn">Send love burst 💗</button>
+    </section>
+
+    <!-- Reasons I love you - hover surprises -->
+    <section class="reasons-section">
+      <h2 class="section-title">Why You're My Forever Valentine</h2>
+      <div class="reasons-grid">
+        <div class="reason-card" data-reason="1">
+          <span class="reason-emoji">✨</span>
+          <h3>Your smile</h3>
+          <p>Lights up my darkest days</p>
+        </div>
+        <div class="reason-card" data-reason="2">
+          <span class="reason-emoji">🌸</span>
+          <h3>Your heart</h3>
+          <p>So kind and full of love</p>
+        </div>
+        <div class="reason-card" data-reason="3">
+          <span class="reason-emoji">🌟</span>
+          <h3>Your soul</h3>
+          <p>My home, my peace</p>
+        </div>
+        <div class="reason-card" data-reason="4">
+          <span class="reason-emoji">💫</span>
+          <h3>Your presence</h3>
+          <p>Makes everything better</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secret message decoder - fun surprise -->
+    <section class="decoder-section">
+      <h2 class="section-title">Decode my heart's message</h2>
+      <div class="decoder-box">
+        <p class="encoded">J-N, 1 l-v- y-u m-r- th-n w-r-d-.</p>
+        <button class="decode-btn" id="decode-btn">Reveal the secret 💕</button>
+        <p class="decoded hidden" id="decoded-msg">Jaan, I love you more than words.</p>
+      </div>
+    </section>
+
+    <!-- Love meter - interactive surprise -->
+    <section class="love-meter-section">
+      <h2 class="section-title">How much do I love you?</h2>
+      <div class="meter-container">
+        <div class="meter-track">
+          <div class="meter-fill" id="meter-fill"></div>
+        </div>
+        <p class="meter-label" id="meter-label">Tap to fill my love →</p>
+        <button class="meter-btn" id="meter-btn">Fill it up! 💖</button>
+      </div>
+    </section>
+
+    <!-- Heart gallery - click for surprises -->
+    <section class="gallery-section">
+      <h2 class="section-title">Little love notes for you</h2>
+      <div class="heart-gallery">
+        <div class="gallery-heart" data-msg="You're my sunshine ☀️">💛</div>
+        <div class="gallery-heart" data-msg="My favorite person ever!">💜</div>
+        <div class="gallery-heart" data-msg="Forever yours 💍">💗</div>
+        <div class="gallery-heart" data-msg="You make me smile every day">💕</div>
+        <div class="gallery-heart" data-msg="My Jaan, my life">💖</div>
+        <div class="gallery-heart" data-msg="I'm so lucky to have you">🌟</div>
+      </div>
+      <div class="gallery-toast hidden" id="gallery-toast"></div>
+    </section>
+
+    <!-- Final love letter -->
+    <section class="letter-section">
+      <div class="final-letter">
+        <div class="final-letter-inner">
+          <h2>To My Jaan,</h2>
+          <p>Every moment with you feels like a gift. You're not just my Valentine—you're my always. Thank you for being you.</p>
+          <p class="signature">With all my love, forever 💕</p>
+          <button class="replay-btn" id="replay-btn">Open the envelope again 💌</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Confetti canvas -->
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- Heart cursor trail (optional surprise) -->
+  <div id="cursor-hearts" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
